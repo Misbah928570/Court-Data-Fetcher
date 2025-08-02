@@ -1,0 +1,6 @@
+case_type,case_number,filing_year,parties,filing_date,next_hearing,order_link
+CR,123,2022,State vs John Doe,2022-03-14,2025-08-15,https://example.com/order1.pdf
+CIVIL,456,2023,Jane Doe vs XYZ Corp,2023-01-10,2025-08-20,https://example.com/order2.pdf
+CR,789,2021,State vs Alex Martin,2021-06-22,2025-09-01,https://example.com/order3.pdf
+FIR,321,2024,State vs Ramesh Kumar,2024-02-05,2025-08-12,https://example.com/order4.pdf
+CIVIL,654,2022,ABC Ltd vs PQR Inc,2022-07-19,2025-08-25,https://example.com/order5.pdf

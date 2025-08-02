@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Case Info Fetcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #eee;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background: #ffffffcc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #27ae60;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2ecc71;
+        }
+
+        .result {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            color: #fff;
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        .result p {
+            margin-bottom: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🧾 Court Case Info Fetcher</h2>
+        <form method="post">
+            <label>Case Type:</label>
+            <input type="text" name="case_type" required>
+
+            <label>Case Number:</label>
+            <input type="text" name="case_number" required>
+
+            <label>Filing Year:</label>
+            <input type="text" name="filing_year" required>
+
+            <button type="submit">🔍 Fetch Case Info</button>
+        </form>
+
+        {% if show_result %}
+    <div class="result">
+        <h3>📄 Case Details:</h3>
+        <p><strong>Parties:</strong> {{ case['parties'] }}</p>
+        <p><strong>Filing Date:</strong> {{ case['filing_date'] }}</p>
+        <p><strong>Next Hearing:</strong> {{ case['next_hearing'] }}</p>
+        <p><strong>Order PDF:</strong> 
+            <a href="/download/{{ case['case_type'] }}_{{ case['case_number'] }}_{{ case['filing_year'] }}" style="color:#ffe;" target="_blank">Download PDF</a>
+        </p>
+    </div>
+{% endif %}
+
+    </div>
+</body>
+</html>
