@@ -21,8 +21,6 @@ Original goal: Scrape [Faridabad District Court (eCourts)](https://districts.eco
 **Reason for fallback:**
 Due to **CAPTCHA and dynamic JavaScript protections**, we used a structured `data.csv` file to simulate scraping while focusing on core logic and presentation.
 
----
-
 🔄 What Happens When You Use the App?
 
 1. You input a case (e.g. CR / 123 / 2022)
