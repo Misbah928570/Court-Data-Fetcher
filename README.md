@@ -60,19 +60,19 @@ court-data-fetcher/
 
 🚀 How to Run
 
-## 1. Clone the Repo
+## 1. **Clone the Repo**
 ```bash
 git clone https://github.com/Misbah/Court-Data-Fetcher.git
 cd Court-Data-Fetcher
-
-## 2. Install Dependencies
+```
+## 2. **Install Dependencies**
 ```bash
 pip install flask requests beautifulsoup4
-
-# 3. Start the App
+```
+# 3. **Start the App**
 ```bash
 python app.py
-
+```
 # 4. Open in Browser
 Navigate to http://127.0.0.1:5000
 
