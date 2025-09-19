@@ -62,12 +62,12 @@ court-data-fetcher/
 
 🚀 How to Run
 
-# 1. Clone the Repo
+## 1. Clone the Repo
 ```bash
 git clone https://github.com/Misbah/Court-Data-Fetcher.git
 cd Court-Data-Fetcher
 
-# 2. Install Dependencies
+## 2. Install Dependencies
 ```bash
 pip install flask requests beautifulsoup4
 
@@ -94,6 +94,3 @@ Parties: State vs John Doe
 Filing Date: 2022-03-14
 Next Hearing: 2025-08-15
 Case Type: CR, Case Number: 123, Year: 2022
-
-📌 License
-MIT License
